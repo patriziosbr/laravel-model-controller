@@ -1,0 +1,30 @@
+@import 'variables';
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    .movies {
+        background-color: $bg-color;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .card-movie {
+            text-align: center;
+            width: 400px;
+            height: 150px;
+            border-radius: 5px;
+            border: 1px solid rgba($color: $txt-color , $alpha: 1);
+            box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.2);
+            margin: 16px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                margin: 4px 0;
+            }
+        }
+    }
+
+}

@@ -6,8 +6,7 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
     <body>
@@ -16,8 +15,13 @@
       <div class="container">
         <div class="movies">
           @foreach ($movies as $movie)
-            <h2> {{ $movie->title }} </h2>
-            
+            <div class="card-movie">
+              <p> <strong>Title: </strong> {{ $movie->title }} </p>
+              <p> <strong>Original Title: </strong> {{ $movie->original_title }} </p>
+              <p> <strong>Nationality: </strong> {{ $movie->nationality }} </p>
+              <p> <strong>Date: </strong> {{ $movie->date  }} </p>
+              <p><strong>rating: </strong> {{ $movie->vote  }} </p>
+            </div>
           @endforeach
         </div>
       </div>
