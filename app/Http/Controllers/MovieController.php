@@ -12,6 +12,17 @@ class MovieController extends Controller
 
         $movies = Movie::all();
 
-        return view('home', compact('movies'));	
+
+        return view('home', [
+            "movies" => $movies
+        ]);	
+    }
+
+    public function test() {
+        
+        //SELECT * FROM `movies` WEHRE `title` LIKE '%adrino%'
+        $padrino = Movie::select('movies.title')->get();
+
+        return view('padrino', compact('padrino'));
     }
 }

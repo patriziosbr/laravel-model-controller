@@ -14,3 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'MovieController@index');
+
+Route::get('/padrino', 'MovieController@test');
+
+Route::get('/ciao', function() {
+
+    $data = [
+        "msg" => "helloworld"
+    ];
+    return view('ciao', $data);
+});

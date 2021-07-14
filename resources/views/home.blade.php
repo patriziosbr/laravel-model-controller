@@ -12,6 +12,11 @@
     <body>
       {{-- <h1> {{ $title }} </h1> --}}
 
+      
+
+      <a href="/padrino "> padrino</a>
+      <a href="/ciao "> ciao</a>
+
       <div class="container">
         <div class="movies">
           @foreach ($movies as $movie)
